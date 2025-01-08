@@ -416,6 +416,10 @@ public class ContextMenuActivity extends PreferenceActivity implements Preferenc
         findPreference(PREF_WINDOW_SIZE_FULLSCREEN).setOnPreferenceClickListener(this);
         findPreference(PREF_WINDOW_SIZE_HALF_LEFT).setOnPreferenceClickListener(this);
         findPreference(PREF_WINDOW_SIZE_HALF_RIGHT).setOnPreferenceClickListener(this);
+        findPreference(PREF_WINDOW_SIZE_1_3_LEFT).setOnPreferenceClickListener(this);
+        findPreference(PREF_WINDOW_SIZE_2_3_RIGHT).setOnPreferenceClickListener(this);
+        findPreference(PREF_WINDOW_SIZE_2_3_LEFT).setOnPreferenceClickListener(this);
+        findPreference(PREF_WINDOW_SIZE_1_3_RIGHT).setOnPreferenceClickListener(this);
         findPreference(PREF_WINDOW_SIZE_PHONE_SIZE).setOnPreferenceClickListener(this);
 
         String windowSizePref = SavedWindowSizes.getInstance(this).getWindowSize(this, entry.getPackageName());
@@ -554,6 +558,10 @@ public class ContextMenuActivity extends PreferenceActivity implements Preferenc
             case PREF_WINDOW_SIZE_FULLSCREEN:
             case PREF_WINDOW_SIZE_HALF_LEFT:
             case PREF_WINDOW_SIZE_HALF_RIGHT:
+            case PREF_WINDOW_SIZE_1_3_LEFT:
+            case PREF_WINDOW_SIZE_2_3_RIGHT:
+            case PREF_WINDOW_SIZE_2_3_LEFT:
+            case PREF_WINDOW_SIZE_1_3_RIGHT:
             case PREF_WINDOW_SIZE_PHONE_SIZE:
                 String windowSize = p.getKey().replace("window_size_", "");
 

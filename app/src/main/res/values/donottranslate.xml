@@ -71,11 +71,15 @@
     <string name="tb_pref_theme_default">light</string>
 
     <string-array name="tb_pref_window_size_list">
-        <item>@string/tb_window_size_standard</item>
-        <item>@string/tb_window_size_large</item>
-        <item>@string/tb_window_size_fullscreen</item>
         <item>@string/tb_window_size_half_left_alt</item>
         <item>@string/tb_window_size_half_right_alt</item>
+        <item>@string/tb_window_size_1_3_left_alt</item>
+        <item>@string/tb_window_size_2_3_right_alt</item>
+        <item>@string/tb_window_size_2_3_left_alt</item>
+        <item>@string/tb_window_size_1_3_right_alt</item>
+        <item>@string/tb_window_size_fullscreen</item>
+        <item>@string/tb_window_size_standard</item>
+        <item>@string/tb_window_size_large</item>
         <item>@string/tb_window_size_phone_size</item>
     </string-array>
 

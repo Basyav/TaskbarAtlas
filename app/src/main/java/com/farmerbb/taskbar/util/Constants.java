@@ -222,6 +222,10 @@ public class Constants {
     public static final String PREF_WINDOW_SIZE_FULLSCREEN = "window_size_fullscreen";
     public static final String PREF_WINDOW_SIZE_HALF_LEFT = "window_size_half_left";
     public static final String PREF_WINDOW_SIZE_HALF_RIGHT = "window_size_half_right";
+    public static final String PREF_WINDOW_SIZE_1_3_LEFT = "window_size_1_3_left";
+    public static final String PREF_WINDOW_SIZE_2_3_RIGHT = "window_size_2_3_right";
+    public static final String PREF_WINDOW_SIZE_2_3_LEFT = "window_size_2_3_left";
+    public static final String PREF_WINDOW_SIZE_1_3_RIGHT = "window_size_1_3_right";
     public static final String PREF_WINDOW_SIZE_LARGE = "window_size_large";
     public static final String PREF_WINDOW_SIZE_PHONE_SIZE = "window_size_phone_size";
     public static final String PREF_WINDOW_SIZE_STANDARD = "window_size_standard";

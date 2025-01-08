@@ -16,17 +16,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Preference
-        android:key="window_size_standard"
-        android:title="@string/tb_window_size_standard" />
 
-    <Preference
-        android:key="window_size_large"
-        android:title="@string/tb_window_size_large" />
-
-    <Preference
-        android:key="window_size_fullscreen"
-        android:title="@string/tb_window_size_fullscreen" />
 
     <Preference
         android:key="window_size_half_left"
@@ -35,6 +25,34 @@
     <Preference
         android:key="window_size_half_right"
         android:title="@string/tb_window_size_half_right" />
+
+    <Preference
+        android:key="window_size_1_3_left"
+        android:title="@string/tb_window_size_1_3_left" />
+
+    <Preference
+        android:key="window_size_2_3_right"
+        android:title="@string/tb_window_size_2_3_right" />
+
+    <Preference
+        android:key="window_size_2_3_left"
+        android:title="@string/tb_window_size_2_3_left" />
+
+    <Preference
+        android:key="window_size_1_3_right"
+        android:title="@string/tb_window_size_1_3_right" />
+
+    <Preference
+        android:key="window_size_fullscreen"
+        android:title="@string/tb_window_size_fullscreen" />
+
+    <Preference
+        android:key="window_size_standard"
+        android:title="@string/tb_window_size_standard" />
+
+    <Preference
+        android:key="window_size_large"
+        android:title="@string/tb_window_size_large" />
 
     <Preference
         android:key="window_size_phone_size"
