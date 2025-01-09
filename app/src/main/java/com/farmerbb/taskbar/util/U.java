@@ -117,7 +117,10 @@ public class U {
     private static final int MAXIMIZED = 0;
     private static final int LEFT = -1;
     private static final int RIGHT = 1;
-
+    private static final int LEFT_1_3 = -2;
+    private static final int RIGHT_2_3 = 2;
+    private static final int LEFT_2_3 = -3;
+    private static final int RIGHT_1_3 = 3;
     public static final int HIDDEN = 0;
     public static final int TOP_APPS = 1;
 
@@ -507,6 +510,13 @@ public class U {
                                       int launchType,
                                       ApplicationType type,
                                       View view) {
+        double divider = (double) 1/2;
+        if(launchType == LEFT_1_3 || launchType == RIGHT_2_3) {
+            divider = (double) 1/3;
+        } else if(launchType == LEFT_2_3 || launchType == RIGHT_1_3) {
+            divider = (double) 2/3;
+        }
+
         DisplayInfo display = getDisplayInfo(context);
 
         int statusBarHeight = getStatusBarHeight(context);
@@ -533,22 +543,22 @@ public class U {
         else
             top = top + iconSize;
 
-        int halfLandscape =
-                (right / 2)
-                        + ((iconSize / 2) * (TaskbarPosition.isVerticalLeft(position) ? 1 : 0));
+        int landscape =
+                (int) ((right * divider)
+                                        + ((iconSize * divider) * (TaskbarPosition.isVerticalLeft(position) ? 1 : 0)));
         boolean isTopLeft = POSITION_TOP_LEFT.equals(position);
         boolean isTopRight = POSITION_TOP_RIGHT.equals(position);
-        int halfPortrait =
-                (bottom / 2) + ((iconSize / 2) * ((isTopLeft || isTopRight) ? 1 : 0));
+        int portrait =
+                (int) ((bottom * divider) + ((iconSize * divider) * ((isTopLeft || isTopRight) ? 1 : 0)));
 
-        if(launchType == RIGHT && isLandscape)
-            left = halfLandscape;
-        else if(launchType == RIGHT && isPortrait)
-            top = halfPortrait;
-        else if(launchType == LEFT && isLandscape)
-            right = halfLandscape;
-        else if(launchType == LEFT && isPortrait)
-            bottom = halfPortrait;
+        if((launchType == RIGHT || launchType == RIGHT_2_3 || launchType == RIGHT_1_3) && isLandscape)
+            left = landscape;
+        else if((launchType == RIGHT || launchType == RIGHT_2_3 || launchType == RIGHT_1_3) && isPortrait)
+            top = portrait;
+        else if((launchType == LEFT || launchType == LEFT_1_3 || launchType == LEFT_2_3) && isLandscape)
+            right = landscape;
+        else if((launchType == LEFT || launchType == LEFT_1_3 || launchType == LEFT_2_3) && isPortrait)
+            bottom = portrait;
 
         return getActivityOptionsBundle(context, type, view, left, top, right, bottom);
     }
@@ -1042,6 +1052,14 @@ public class U {
                 return launchMode2(context, LEFT, type, view);
             case "half_right":
                 return launchMode2(context, RIGHT, type, view);
+            case "1_3_left":
+                return launchMode2(context, LEFT_1_3, type, view);
+            case "2_3_right":
+                return launchMode2(context, RIGHT_2_3, type, view);
+            case "2_3_left":
+                return launchMode2(context, LEFT_2_3, type, view);
+            case "1_3_right":
+                return launchMode2(context, RIGHT_1_3, type, view);
             case "phone_size":
                 return launchMode3(context, type, view);
         }

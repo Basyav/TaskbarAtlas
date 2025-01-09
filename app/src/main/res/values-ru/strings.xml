@@ -16,8 +16,8 @@
 
 <resources>
 
-    <string name="tb_app_name">Taskbar</string>
-    <string name="tb_app_name_debug">Taskbar (Debug)</string>
+    <string name="tb_app_name">TaskbarAtlas</string>
+    <string name="tb_app_name_debug">TaskbarAtlas (Debug)</string>
 
     <string name="tb_taskbar_is_active">Taskbar запущен</string>
     <string name="tb_click_to_open_settings">Нажмите для запуска настроек</string>
@@ -159,9 +159,17 @@
     <string name="tb_window_size_phone_size">Размер телефона</string>
     <string name="tb_window_size_large">Огромный</string>
     <string name="tb_window_size_half_left">@string/tb_window_size_half_left_alt</string>
-    <string name="tb_window_size_half_left_alt">Половина экрана (левая/верхняя)</string>
+    <string name="tb_window_size_half_left_alt">1/2 экрана верх</string>
     <string name="tb_window_size_half_right">@string/tb_window_size_half_right_alt</string>
-    <string name="tb_window_size_half_right_alt">Половина экрана (правая/нижняя)</string>
+    <string name="tb_window_size_half_right_alt">1/2 экрана низ</string>
+    <string name="tb_window_size_1_3_left">@string/tb_window_size_1_3_left_alt</string>
+    <string name="tb_window_size_1_3_left_alt">1/3 экрана верх</string>
+    <string name="tb_window_size_2_3_right">@string/tb_window_size_2_3_right_alt</string>
+    <string name="tb_window_size_2_3_right_alt">2/3 экрана низ</string>
+    <string name="tb_window_size_2_3_left">@string/tb_window_size_2_3_left_alt</string>
+    <string name="tb_window_size_2_3_left_alt">2/3 экрана верх</string>
+    <string name="tb_window_size_1_3_right">@string/tb_window_size_1_3_right_alt</string>
+    <string name="tb_window_size_1_3_right_alt">1/3 экрана низ</string>
 
     <string name="tb_pref_title_blacklist">Настроить приложения в меню</string>
     <string name="tb_app_hidden">1 приложение спрятано</string>
